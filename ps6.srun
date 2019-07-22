@@ -1,0 +1,11 @@
+#!/bin/bash
+#SBATCH --partition=bgmp                    ### Partition (like a queue in PBS)
+#SBATCH --job-name=velveth_annie      ### Job Name
+#SBATCH --output=velveth.out          ### File in which to store job output
+#SBATCH --error=velveth.err           ### File in which to store job error messages
+#SBATCH --time=0-00:60:00                   ### Wall clock time limit in Days-HH:MM:SS
+#SBATCH --nodes=1                           ### Number of nodes needed for the job
+#SBATCH --cpus-per-task=7
+#SBATCH --account=bgmp                      ### Account used for job submission
+
+/usr/bin/time -v velveth /projects/bgmp/awang/Bi621/PS6/49 49 -fastq /projects/bgmp/shared/Bi621/800_3_PE5_interleaved.fq.unmatched -shortPaired /projects/bgmp/shared/Bi621/800_3_PE5_interleaved.fq_1 /projects/bgmp/shared/Bi621/800_3_PE5_interleaved.fq_2 

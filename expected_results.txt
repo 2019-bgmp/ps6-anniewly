@@ -1,0 +1,9 @@
+Note that this result is with kmer size 1
+The number of contigs is 10
+The maximum contig length is 10
+The mean contig length is 5.5
+The total length of the genome assembly across the contigs is 55
+The mean depth of coverage for the contigs is 55
+The N50 values is 7
+#Contig length   Number of contigs in this category
+0       10
