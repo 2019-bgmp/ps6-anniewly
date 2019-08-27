@@ -8,4 +8,5 @@
 #SBATCH --cpus-per-task=7
 #SBATCH --account=bgmp                      ### Account used for job submission
 
-/usr/bin/time -v velveth /projects/bgmp/awang/Bi621/PS6/49 49 -fastq /projects/bgmp/shared/Bi621/800_3_PE5_interleaved.fq.unmatched -shortPaired /projects/bgmp/shared/Bi621/800_3_PE5_interleaved.fq_1 /projects/bgmp/shared/Bi621/800_3_PE5_interleaved.fq_2 
+/usr/bin/time -v velveth /projects/bgmp/awang/Bi621/PS6/41 41 -fastq /projects/bgmp/shared/Bi621/800_3_PE5_interleaved.fq.unmatched \
+-shortPaired /projects/bgmp/shared/Bi621/800_3_PE5_interleaved.fq_1 /projects/bgmp/shared/Bi621/800_3_PE5_interleaved.fq_2 

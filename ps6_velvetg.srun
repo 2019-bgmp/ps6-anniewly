@@ -1,0 +1,17 @@
+#!/bin/bash
+#SBATCH --partition=bgmp                    ### Partition (like a queue in PBS)
+#SBATCH --job-name=velvetg_annie      ### Job Name
+#SBATCH --output=velvetg.out          ### File in which to store job output
+#SBATCH --error=velvetg.err           ### File in which to store job error messages
+#SBATCH --time=0-00:60:00                   ### Wall clock time limit in Days-HH:MM:SS
+#SBATCH --nodes=1                           ### Number of nodes needed for the job
+#SBATCH --cpus-per-task=7
+#SBATCH --account=bgmp                      ### Account used for job submission
+
+/usr/bin/time -v velvetg /projects/bgmp/awang/Bi621/PS6/49 -cov_cutoff auto -min_contig_lgth 500
+
+mv /projects/bgmp/awang/Bi621/PS6/49/contigs.fa /projects/bgmp/awang/Bi621/PS6/49/min500bp
+mv /projects/bgmp/awang/Bi621/PS6/49/Graph /projects/bgmp/awang/Bi621/PS6/49/min500bp
+mv /projects/bgmp/awang/Bi621/PS6/49/LastGraph /projects/bgmp/awang/Bi621/PS6/49/min500bp
+mv /projects/bgmp/awang/Bi621/PS6/49/PreGraph /projects/bgmp/awang/Bi621/PS6/49/min500bp
+mv /projects/bgmp/awang/Bi621/PS6/49/stats.txt /projects/bgmp/awang/Bi621/PS6/49/min500bp
